@@ -1,0 +1,10 @@
+# Python-miljøet gjenskapes ved installasjon og skal ikke lastes opp.
+.venv/
+
+# Automatisk genererte Python-filer.
+__pycache__/
+*.pyc
+
+# Lokale miljøvariabler og systemfiler.
+.env
+.DS_Store
