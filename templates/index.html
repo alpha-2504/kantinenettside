@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{# AI-generert med Claude Code #}
+
+{# extends "base.html" arver hele grunnmalen, slik at vi slipper å gjenta
+   HTML-strukturen, navigasjonen og footeren på hver side. #}
+
+{# block content definerer innholdet som skal vises i main-området fra base.html. #}
+{% block content %}
+
+    {# kantine.navn og kantine.beskrivelse henter verdiene fra ordboken
+       som ble sendt med render_template i app.py. #}
+    <h1>{{ kantine.navn }}</h1>
+    <p>{{ kantine.beskrivelse }}</p>
+
+{% endblock %}

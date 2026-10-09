@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- AI-generert med Claude Code -->
+<!-- lang="nb" setter norsk bokmål som sidespråk, noe som hjelper skjermlesere og søkemotorer. -->
+<html lang="nb">
+<head>
+    <!-- charset="UTF-8" sørger for at norske tegn som æ, ø og å vises riktig. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- kantine.navn henter navnet fra ordboken vi sendte fra app.py og viser det i nettleserfanen. -->
+    <title>{{ kantine.navn }}</title>
+</head>
+<body>
+
+    <!-- Navigasjonsmenyen vises øverst på alle sider som arver denne malen. -->
+    <nav>
+        <!-- url_for('index') genererer riktig nettadresse til index-funksjonen i app.py.
+             Det er tryggere enn å skrive "/" direkte, fordi det fungerer selv om adressen endres. -->
+        <a href="{{ url_for('index') }}">Hjem</a>
+    </nav>
+
+    <!-- main er hoveddelen av siden. content-blokken er en plassholder som
+         underordnede maler (som index.html) fyller med sitt eget innhold. -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footeren vises nederst på alle sider som arver denne malen. -->
+    <footer>
+        <p>{{ kantine.navn }}</p>
+    </footer>
+
+</body>
+</html>
